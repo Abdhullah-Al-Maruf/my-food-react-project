@@ -1,8 +1,17 @@
 import React from 'react';
+import { useState } from 'react';
 
 
+const Banner = ({setSearchText}) => {
+      const [inputValue, setInputValue] = useState("");
 
-const Banner = () => {
+const  handleSearch=()=>{
+ 
+    setSearchText(inputValue);
+}
+     
+ 
+
     return (
         <div className='mt-3'>
 
@@ -29,12 +38,15 @@ const Banner = () => {
                                         <input
                                             className="rounded-full  px-3"
                                             type="text"
+                                            value={inputValue}
                                             placeholder="Search Item"
+                                            onChange={(e) => setInputValue(e.target.value)}
+
                                             required
                                         />
                                     </label>
                                 </div>
-                                <button className="btn text-gray-200 bg-amber-500 p-2 join-item rounded-full h-full px-6">
+                                <button   onClick={handleSearch} className="btn text-gray-200 bg-amber-500 p-2 join-item rounded-full h-full px-6">
                                     Search
                                 </button>
                             </div>

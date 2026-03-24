@@ -25,7 +25,7 @@ export default function Navbar() {
             className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li><a>Home</a></li>
-            <li><a>Menu</a></li>
+            <li><a href="#menu">Menu</a></li>
             <li><a>About</a></li>
           </ul>
         </div>
